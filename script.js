@@ -2,6 +2,7 @@ const timeLeftDisplay= document.querySelector('#time-left')
 const resultDisplay= document.querySelector('#result')
 const startPauseButton= document.querySelector('#start-pause-button')
 const squares= document.querySelectorAll('.grid div')
+const reward = document.querySelector('#reward')
 // [div,div,...] 배열로 저장된다.
 
 const logsLeft= document.querySelectorAll('.log-left') //[배열]
@@ -17,7 +18,7 @@ let timer1Id
 let timer2Id
 let timer3Id
 let outcomeTimerId
-let currentTime =20
+let currentTime =10
 
 function moveFrog(e){
   squares[currentIndex].classList.remove('frog')
@@ -166,12 +167,32 @@ function lose(){
 
 function win(){
   if(squares[currentIndex].classList.contains('ending-block')){
-    resultDisplay.textContent = 'You Win!'
-    clearInterval(timer1Id); clearInterval(timer2Id);
+    resultDisplay.textContent = 'You Win!'    
+    clearInterval(timer1Id); 
+    clearInterval(timer2Id);
     clearInterval(timer3Id);
     squares[currentIndex].classList.remove('frog')
     document.removeEventListener('keyup', moveFrog)
+    if (currentTime >3){
+      const rewardBtn = document.createElement('button')
+      const rwdImg= document.createElement('img');
+      document.body.appendChild(rwdImg);
+        
+      rewardBtn.addEventListener('click', ()=>{      
+      rwdImg.setAttribute('src', 'reward.png')
+    
+      });   
+      rewardBtn.innerText = "Meet your girl"
+      reward.appendChild(rewardBtn)  
+      clearInterval(outcomeTimerId)
+      
+    }
+    
+    
+               
+         
   }
+  
 }
 
 function checkOutComes(){  // lose, win function이 항시 작동

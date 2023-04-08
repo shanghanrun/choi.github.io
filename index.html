@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,97 +8,106 @@
   <title>Frogger</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h3>Seconds left: <span id="time-left">20</span></h3>
+  <h3>제한시간 10초, 5초이내에 여친을 만나자.</h3>
+  <h4>start버튼을 눌러서 자동차가 움직이면 게임시작</h4>
+  <h3>Seconds left: <span id="time-left">10</span></h3>
   <h3>Result: <span id="result">0</span></h3>
-  <button id="start-pause-button">Start/Pause</button>
+  <h3>Reward: <span id="reward">?</span></h3>
+
   <div></div>
 
-  <div class="grid">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="ending-block"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="log-left l1"></div>
-    <div class="log-left l2"></div>
-    <div class="log-left l3"></div>
-    <div class="log-left l4"></div>
-    <div class="log-left l5"></div>
-    <div class="log-left l1"></div>
-    <div class="log-left l2"></div>
-    <div class="log-left l3"></div>
-    <div class="log-left l4"></div>
+  <div>
+    <div class="grid">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="ending-block"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="log-left l1"></div>
+      <div class="log-left l2"></div>
+      <div class="log-left l3"></div>
+      <div class="log-left l4"></div>
+      <div class="log-left l5"></div>
+      <div class="log-left l1"></div>
+      <div class="log-left l2"></div>
+      <div class="log-left l3"></div>
+      <div class="log-left l4"></div>
 
-    <div class="log-right l5"></div>
-    <div class="log-right l1"></div>
-    <div class="log-right l2"></div>
-    <div class="log-right l3"></div>
-    <div class="log-right l4"></div>
-    <div class="log-right l5"></div>
-    <div class="log-right l1"></div>
-    <div class="log-right l2"></div>
-    <div class="log-right l3"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="car-left c1"></div>
-    <div class="car-left c2"></div>
-    <div class="car-left c3"></div>
-    <div class="car-left c1"></div>
-    <div class="car-left c2"></div>
-    <div class="car-left c3"></div>
-    <div class="car-left c1"></div>
-    <div class="car-left c2"></div>
-    <div class="car-left c3"></div>
-    <div class="car-right c1"></div>
-    <div class="car-right c2"></div>
-    <div class="car-right c3"></div>
-    <div class="car-right c1"></div>
-    <div class="car-right c2"></div>
-    <div class="car-right c3"></div>
-    <div class="car-right c1"></div>
-    <div class="car-right c2"></div>
-    <div class="car-right c3"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>    
-    <div class="starting-block frog"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+      <div class="log-right l5"></div>
+      <div class="log-right l1"></div>
+      <div class="log-right l2"></div>
+      <div class="log-right l3"></div>
+      <div class="log-right l4"></div>
+      <div class="log-right l5"></div>
+      <div class="log-right l1"></div>
+      <div class="log-right l2"></div>
+      <div class="log-right l3"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="car-left c1"></div>
+      <div class="car-left c2"></div>
+      <div class="car-left c3"></div>
+      <div class="car-left c1"></div>
+      <div class="car-left c2"></div>
+      <div class="car-left c3"></div>
+      <div class="car-left c1"></div>
+      <div class="car-left c2"></div>
+      <div class="car-left c3"></div>
+      <div class="car-right c1"></div>
+      <div class="car-right c2"></div>
+      <div class="car-right c3"></div>
+      <div class="car-right c1"></div>
+      <div class="car-right c2"></div>
+      <div class="car-right c3"></div>
+      <div class="car-right c1"></div>
+      <div class="car-right c2"></div>
+      <div class="car-right c3"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="starting-block frog"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <button id="start-pause-button">Start/Pause</button>
   </div>
+
 
   <script src="script.js"></script>
 </body>
+
 </html>
