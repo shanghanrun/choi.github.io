@@ -173,7 +173,7 @@ function win(){
     clearInterval(timer3Id);
     squares[currentIndex].classList.remove('frog')
     document.removeEventListener('keyup', moveFrog)
-    if (currentTime >3){
+    if (currentTime >4){
       const rewardBtn = document.createElement('button')
       const rwdImg= document.createElement('img');
       document.body.appendChild(rwdImg);
